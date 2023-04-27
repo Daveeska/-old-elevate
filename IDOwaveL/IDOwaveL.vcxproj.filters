@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{ddc4a11d-519e-4647-915f-9a4b34938004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{95e415b0-2432-4a2d-a242-381d7a58de55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EventListener">
+      <UniqueIdentifier>{b2dc6b4d-81d5-4f9e-94bb-da372ed596d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{9fdf0ab8-daa4-485c-b651-4536f6aaa9d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Window\Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\LevelEditorScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\LevelScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\Scene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener\KeyboardListener.cpp">
+      <Filter>EventListener</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener\MouseListener.cpp">
+      <Filter>EventListener</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Physics\Common.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Vec.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Rectangle.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window\Window.hpp">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\LevelEditorScene.hpp">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\LevelScene.hpp">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\Scene.hpp">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener\KeyboardListener.hpp">
+      <Filter>EventListener</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener\MouseListener.hpp">
+      <Filter>EventListener</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Common.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Vec.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Rectangle.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
