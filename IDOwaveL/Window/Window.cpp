@@ -28,7 +28,7 @@ Window* Window::get(){
 
 void Window::addEntity(std::unique_ptr<Rectangle> rec)
 {
-    recs.push_back(rec);
+    recs.emplace_back(std::move(rec));
 }
 
 void Window::changeScene(Scenes newScene) {

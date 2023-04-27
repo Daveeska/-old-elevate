@@ -30,10 +30,8 @@ public:
 
 int main(int argc, char **argv) {
 
-	std::unique_ptr<Player> plr;
-
 	Window* window = Window::get();
-	window->recs.push_back(std::move(plr));
+	window->recs.emplace_back(std::make_unique<Player>());
 	window->run();
 
 	return 0;
