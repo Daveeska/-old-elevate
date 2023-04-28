@@ -30,12 +30,6 @@
     <ClCompile Include="Scenes\Scene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="EventListener\KeyboardListener.cpp">
-      <Filter>EventListener</Filter>
-    </ClCompile>
-    <ClCompile Include="EventListener\MouseListener.cpp">
-      <Filter>EventListener</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Physics\Common.cpp">
       <Filter>Physics</Filter>
@@ -45,6 +39,9 @@
     </ClCompile>
     <ClCompile Include="Physics\Rectangle.cpp">
       <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener\InputManager.cpp">
+      <Filter>EventListener</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,12 +57,6 @@
     <ClInclude Include="Scenes\Scene.hpp">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="EventListener\KeyboardListener.hpp">
-      <Filter>EventListener</Filter>
-    </ClInclude>
-    <ClInclude Include="EventListener\MouseListener.hpp">
-      <Filter>EventListener</Filter>
-    </ClInclude>
     <ClInclude Include="Physics\Common.hpp">
       <Filter>Physics</Filter>
     </ClInclude>
@@ -74,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="Physics\Rectangle.hpp">
       <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener\InputManager.hpp">
+      <Filter>EventListener</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

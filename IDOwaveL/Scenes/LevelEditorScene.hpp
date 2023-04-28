@@ -11,6 +11,6 @@ private:
 	float timeToChangeScene = 2.0f;
 public:
 	void init();
-	void update(float dt, SDL_Event &ev, SDL_Renderer& ren);
+	void update(float dt, SDL_Event& ev, SDL_Renderer& ren);
 	LevelEditorScene();
 };

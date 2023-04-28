@@ -135,8 +135,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EventListener\KeyboardListener.cpp" />
-    <ClCompile Include="EventListener\MouseListener.cpp" />
+    <ClCompile Include="EventListener\InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Physics\Common.cpp" />
     <ClCompile Include="Physics\Rectangle.cpp" />
@@ -147,8 +146,7 @@
     <ClCompile Include="Window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EventListener\KeyboardListener.hpp" />
-    <ClInclude Include="EventListener\MouseListener.hpp" />
+    <ClInclude Include="EventListener\InputManager.hpp" />
     <ClInclude Include="Physics\Common.hpp" />
     <ClInclude Include="Physics\Rectangle.hpp" />
     <ClInclude Include="Physics\Vec.hpp" />

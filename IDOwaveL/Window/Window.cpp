@@ -87,6 +87,8 @@ void Window::init(){
         std::cout << "(SDL) Renderer has been created. \n";
     }
 
+    mInputManager = InputManager::instance();
+
 
     changeScene(LEVEL_EDITOR_SCENE);
 }
@@ -103,8 +105,15 @@ void Window::loop(){
         SDL_SetRenderDrawColor(renderer, _r, _g, _b, 255);
         SDL_RenderClear(renderer);
         
-        if (dt >= 0)
+        if (dt >= 0) {
+
+            mInputManager->Update();
+            /*if (mInputManager->KeyDown(SDL_SCANCODE_W)) {
+                std::cout << "W\n";
+            }*/
+
             current_scene->update(dt, w_event, *renderer);
+        }
 
         SDL_RenderPresent(renderer);
 
@@ -121,6 +130,8 @@ void Window::run(){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(sdl_window);
 
+    InputManager::Release();
+    mInputManager = NULL;
     delete window;
 
     SDL_Quit();

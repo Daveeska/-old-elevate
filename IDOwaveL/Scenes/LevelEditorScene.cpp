@@ -42,15 +42,18 @@ void LevelEditorScene::update(float dt, SDL_Event& ev, SDL_Renderer& ren) {
 			Window::changeScene(LEVEL_SCENE);
 		}
 	}
-	
-	for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
-		SDL_Rect rect;
-		rect.x = e->pos.x;
-		rect.y = e->pos.y;
-		rect.w = e->size.x;
-		rect.h = e->size.y;
 
-		SDL_SetRenderDrawColor(&ren, e->Color.x, e->Color.y, e->Color.z, 255);
+	for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
+
+		e->update(dt);
+
+		SDL_Rect rect;
+		rect.x = e->getPos().x;
+		rect.y = e->getPos().y;
+		rect.w = e->getSize().x;
+		rect.h = e->getSize().y;
+
+		SDL_SetRenderDrawColor(&ren, e->getColor().x, e->getColor().y, e->getColor().z, 255);
 		SDL_RenderFillRect(&ren, &rect);
 	}
 
