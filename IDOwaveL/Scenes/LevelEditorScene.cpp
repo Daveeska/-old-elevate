@@ -8,10 +8,6 @@
 
 void LevelEditorScene::init() {
 
-	for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
-		e->init();
-	}
-
 	std::cout << "Level Editor Scene has been initialized. \n";
 }
 
@@ -44,8 +40,6 @@ void LevelEditorScene::update(float dt, SDL_Event& ev, SDL_Renderer& ren) {
 	}
 
 	for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
-
-		e->update(dt);
 
 		SDL_Rect rect;
 		rect.x = e->getPos().x;

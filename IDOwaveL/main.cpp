@@ -1,8 +1,10 @@
+#include <iostream>
 #include <memory>
 
 #include "Window/Window.hpp"
 #include "Physics/Rectangle.hpp"
 #include "Physics/Vec.hpp"
+#include "EventListener/InputManager.hpp"
 
 class Player : public Rectangle {
 public:
@@ -17,12 +19,16 @@ public:
 		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_W)) this->Move({ 0, -200*dt });
 		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_A)) this->Move({ -200*dt, 0 });
 		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_S)) this->Move({ 0, 200*dt });
-		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_D)) this->Move({ 200*dt, 0 });
+		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_D)) this->Move({ 200 * dt, 0 });
+		
+		if (Window::get()->mInputManager->MousePressed(InputManager::left)) std::cout<<"wow.\n";
 
 	}
 
 	Player() {
-		
+		this->Color = { 255,130,240 };
+		this->pos = { 500,500 };
+		this->size = { 50,50 };
 	}
 
 	~Player()

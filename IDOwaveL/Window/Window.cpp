@@ -117,6 +117,8 @@ void Window::loop(){
 
         SDL_RenderPresent(renderer);
 
+
+        mInputManager->UpdatePrevInput();
         endTime = Time::getTime();
         dt = endTime - beginTime;
         beginTime = endTime;
