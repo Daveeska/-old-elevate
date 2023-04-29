@@ -47,10 +47,9 @@ void LevelEditorScene::update(float dt, SDL_Event& ev, SDL_Renderer& ren) {
 		rect.w = e->getSize().x;
 		rect.h = e->getSize().y;
 		
-
-		if (Window::get()->mInputManager->MouseDown(SDL_BUTTON_LEFT) && CollisionDetection::checkCollisionPointRec(Window::get()->mInputManager->GetMousePos(), { rect.x, rect.y },  { rect.w, rect.h})) {
-			1;
-		}
+		//if (Window::get()->mInputManager->MouseDown(SDL_BUTTON_LEFT) && CollisionDetection::checkCollisionPointRec(Window::get()->mInputManager->GetMousePos(), { rect.x, rect.y },  { rect.w, rect.h})) {
+		//	1;
+		//}
 
 		SDL_SetRenderDrawColor(&ren, e->getColor().x, e->getColor().y, e->getColor().z, 255);
 		SDL_RenderFillRect(&ren, &rect);
