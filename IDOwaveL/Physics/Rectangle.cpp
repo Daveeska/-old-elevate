@@ -21,6 +21,10 @@ void Rectangle::reSize(Vec2 New_size) {
 	this->size = New_size;
 }
 
+void Rectangle::rePos(Vec2 New_Position) {
+	this->pos = New_Position;
+}
+
 void Rectangle::reColor(Vec3 New_Color) {
 	this->Color = New_Color;
 }

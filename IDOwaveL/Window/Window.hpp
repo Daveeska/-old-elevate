@@ -21,7 +21,7 @@ private:
     SDL_Renderer* renderer = nullptr;
     SDL_Window* sdl_window = nullptr;
     SDL_Event w_event;
-    
+
     //Singleton stuff
     static inline Window* window = NULL;
     Scene* current_scene;

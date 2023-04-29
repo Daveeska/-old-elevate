@@ -146,6 +146,7 @@
     <ClCompile Include="Window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Elevate.hpp" />
     <ClInclude Include="EventListener\InputManager.hpp" />
     <ClInclude Include="Physics\Common.hpp" />
     <ClInclude Include="Physics\Rectangle.hpp" />

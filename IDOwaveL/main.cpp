@@ -21,8 +21,8 @@ public:
 		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_S)) this->Move({ 0, 200*dt });
 		if (Window::get()->mInputManager->KeyDown(SDL_SCANCODE_D)) this->Move({ 200 * dt, 0 });
 		
-		if (Window::get()->mInputManager->MousePressed(InputManager::left)) std::cout<<"wow.\n";
-
+		if (Window::get()->mInputManager->KeyPressed(SDL_SCANCODE_W)) std::cout << "WOW!!!\n";
+		if (Window::get()->mInputManager->MouseDown(InputManager::left)) this->pos = Window::get()->mInputManager->GetMousePos();
 	}
 
 	Player() {

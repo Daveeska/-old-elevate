@@ -69,5 +69,6 @@
     <ClInclude Include="EventListener\InputManager.hpp">
       <Filter>EventListener</Filter>
     </ClInclude>
+    <ClInclude Include="Elevate.hpp" />
   </ItemGroup>
 </Project>

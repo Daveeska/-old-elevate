@@ -17,6 +17,7 @@ public:
 
 	void reSize(Vec2 New_size);
 	void reColor(Vec3 New_Color);
+	void rePos(Vec2 New_Position);
 
 	virtual void init();
 	virtual void update(float dt);

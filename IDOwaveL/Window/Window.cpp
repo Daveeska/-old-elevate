@@ -90,7 +90,7 @@ void Window::init(){
     mInputManager = InputManager::instance();
 
 
-    changeScene(LEVEL_EDITOR_SCENE);
+    //changeScene(LEVEL_EDITOR_SCENE);
 }
 
 void Window::loop(){
@@ -98,6 +98,10 @@ void Window::loop(){
     float beginTime = Time::getTime();
     float endTime = Time::getTime();
     float dt = -1;
+
+    for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
+        e->init();
+    }
 
     while (!is_closed) {
         pollEvents();
@@ -108,15 +112,22 @@ void Window::loop(){
         if (dt >= 0) {
 
             mInputManager->Update();
-            /*if (mInputManager->KeyDown(SDL_SCANCODE_W)) {
-                std::cout << "W\n";
-            }*/
 
-            current_scene->update(dt, w_event, *renderer);
+            for (std::unique_ptr<Rectangle>& e : Window::get()->recs) {
+
+                SDL_Rect rect;
+                rect.x = e->getPos().x;
+                rect.y = e->getPos().y;
+                rect.w = e->getSize().x;
+                rect.h = e->getSize().y;
+
+                e->update(dt);
+                SDL_SetRenderDrawColor(renderer, e->getColor().x, e->getColor().y, e->getColor().z, 255);
+                SDL_RenderFillRect(renderer, &rect);
+            }
         }
 
         SDL_RenderPresent(renderer);
-
 
         mInputManager->UpdatePrevInput();
         endTime = Time::getTime();

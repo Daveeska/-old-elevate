@@ -42,28 +42,33 @@ Vec2 InputManager::GetMousePos() {
 	return Vec2((float)mx, (float)my);
 }
 
-bool InputManager::MouseDown(MOUSE_BUTTONS button) {
-	Uint32 mask = 0;
-	switch (button) {
-	case left:
-		mask = SDL_BUTTON_LMASK;
-		break;
-	case right:
-		mask = SDL_BUTTON_RMASK;
-		break;
-	case middle:
-		mask = SDL_BUTTON_MMASK;
-		break;
-	case back:
-		mask = SDL_BUTTON_X1MASK;
-		break;
-	case forward:
-		mask = SDL_BUTTON_X2MASK;
-		break;
-	}
-
-	return (mMouseState & mask);
+bool InputManager::MouseDown(int button) {
+	return (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(button));
 }
+
+///*
+//bool InputManager::MouseDown(MOUSE_BUTTONS button) {
+//	Uint32 mask = 0;
+//	switch (button) {
+//	case left:
+//		mask = SDL_BUTTON_LMASK;
+//		break;
+//	case right:
+//		mask = SDL_BUTTON_RMASK;
+//		break;
+//	case middle:
+//		mask = SDL_BUTTON_MMASK;
+//		break;
+//	case back:
+//		mask = SDL_BUTTON_X1MASK;
+//		break;
+//	case forward:
+//		mask = SDL_BUTTON_X2MASK;
+//		break;
+//	}
+//
+//	*/return (mMouseState & mask);
+//}
 
 bool InputManager::MousePressed(MOUSE_BUTTONS button) {
 	Uint32 mask = 0;

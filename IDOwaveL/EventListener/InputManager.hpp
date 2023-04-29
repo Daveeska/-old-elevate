@@ -37,7 +37,7 @@ public:
 	bool KeyDown(SDL_Scancode scanCode);
 	bool KeyReleased(SDL_Scancode scancode);
 
-	bool MouseDown(MOUSE_BUTTONS button);
+	bool MouseDown(int button);
 	bool MousePressed(MOUSE_BUTTONS button);
 	bool MouseReleased(MOUSE_BUTTONS button);
 
